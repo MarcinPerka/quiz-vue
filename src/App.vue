@@ -8,10 +8,14 @@
       <b-row>
         <b-col sm="6" offset="3">
           <QuestionBox 
-          v-if="questions.length"
+          v-if="questions.length && index < 2"
           :currentQuestion="questions[index]" 
           :next="next"
-          :increment="increment"/>
+          :increment="increment"
+          />
+          <Result 
+          :numCorrect="numCorrect"
+          v-else/>
         </b-col>
       </b-row>
     </b-container>
@@ -21,19 +25,22 @@
 <script>
 import Header from "./components/Header.vue";
 import QuestionBox from "./components/QuestionBox.vue";
+import Result from "./components/Result.vue";
 
 export default {
   name: "app",
   components: {
     Header,
-    QuestionBox
+    QuestionBox,
+    Result
   },
   data() {
     return {
       questions: [],
       index: 0,
       numCorrect: 0,
-      numTotal: 0
+      numTotal: 0,
+      componentKey: 0
     };
   },
   methods: {

@@ -15,9 +15,3 @@ export default {
     ]
 }
 </script>
-
-<style scoped>
-.nav-item{
-  color: #FBFBFA !important;
-}
-</style>

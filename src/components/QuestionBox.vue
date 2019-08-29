@@ -1,9 +1,10 @@
 <template>
+
   <b-jumbotron class="card">
     <h4 class="question" v-html="currentQuestion.question"></h4>
     <hr class="my-4" />
-    <b-list-group>
-      <b-list-group-item
+    <b-list-group class="answer">
+       <b-list-group-item
         v-for="(answer, index) in answers"
         :key="index"
         @click.prevent="selectAnswer(index)"
@@ -17,7 +18,7 @@
       @click="submitAnswer"
       :disabled="selectedIndex === null || answered"
     >Submit</b-button>
-    <b-button pill class="btn-info" @click="next">Next</b-button>
+    <b-button pill class="btn-info" @click="next" :disabled="answered === false">Next</b-button>
   </b-jumbotron>
 </template>
 
@@ -28,7 +29,7 @@ export default {
   props: {
     currentQuestion: Object,
     next: Function,
-    increment: Function
+    increment: Function,
   },
   data() {
     return {
