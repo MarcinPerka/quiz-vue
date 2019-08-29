@@ -4,11 +4,11 @@
       :numCorrect="numCorrect"
       :numTotal="numTotal"
     />
-    <b-container class="bv-example-row">
+    <b-container>
       <b-row>
-        <b-col sm="6" offset="3">
+        <b-col class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3">
           <QuestionBox 
-          v-if="questions.length && index < 2"
+          v-if="questions.length && index < 10"
           :currentQuestion="questions[index]" 
           :next="next"
           :increment="increment"
@@ -85,5 +85,4 @@ body {
   
   width: 100%;
 }
-
 </style>

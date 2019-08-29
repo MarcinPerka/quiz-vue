@@ -27,7 +27,7 @@ export default {
     result: function() {
         let result = '';
         if(this.numCorrect < 5){
-            result = 'You need to pratice';
+            result = 'You need to learn more';
         }else if(this.numCorrect <7){
             result = 'It is a good result';
         }else if(this.numCorrect <=9){

@@ -146,7 +146,6 @@ export default {
 .card {
   display: inline-block;
   position: relative;
-  width: 100%;
   margin-bottom: 30px;
   border-radius: 15px;
   color: rgba(0,0,0, 0.87);
