@@ -8,7 +8,7 @@
       <b-row>
         <b-col sm="6" offset="3">
           <QuestionBox 
-          v-if="questions.length && index < 10"
+          v-if="index < 10"
           :currentQuestion="questions[index]" 
           :next="next"
           :increment="increment"
@@ -55,7 +55,7 @@ export default {
     }
   },
   mounted: function() {
-    fetch("https://opentdb.com/api.php?amount=10&category=18&type=multiple", {
+    fetch("https://opentdb.com/api.php?amount=10&category=22&type=multiple", {
       method: "get"
     })
       .then(response => {
