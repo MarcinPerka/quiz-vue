@@ -4,9 +4,9 @@
       :numCorrect="numCorrect"
       :numTotal="numTotal"
     />
-    <b-container>
+    <b-container class="container">
       <b-row>
-        <b-col sm="6" offset="3">
+        <b-col >
           <QuestionBox 
           v-if="index < 10"
           :currentQuestion="questions[index]" 
