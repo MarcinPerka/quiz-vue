@@ -5,7 +5,8 @@
       <br />
     </h4>
     <hr class="my-4" />
-    <b-img :src="result[0]" fluid alt="Responsive image"></b-img>
+    <b-img :src="result[0]" class="img-fluid" alt="Responsive image"></b-img>
+      <p class="question"> Result: {{numCorrect}} / 10</p>
       <p class="answer">{{result[1]}}</p>
     <b-button pill class="btn-success" @click="reloadPage">Play again</b-button>
   </b-jumbotron>
@@ -27,16 +28,16 @@ export default {
         let result = [];
         if(this.numCorrect < 5){
             result.push('https://i.imgur.com/kLrG9IM.png');
-            result.push('Bad');
+            result.push('I love cheese, especially parmesan brie blue castello pepper jack fromage stinking bishop fromage frais dolcelatte smelly cheese. Cheese on toast squirty cheese, cheese and wine cheesy feet mascarpone danish fontina feta.');
         }else if(this.numCorrect <7){
             result.push('https://i.imgur.com/l8wAI21.png'); 
-            result.push('Good');
+            result.push('I love cheese, especially parmesan brie blue castello pepper jack fromage stinking bishop fromage frais dolcelatte smelly cheese. Cheese on toast squirty cheese, cheese and wine cheesy feet mascarpone danish fontina feta.');
         }else if(this.numCorrect <=9){
             result.push('https://i.imgur.com/Qumjxfk.png');
-            result.push('Better');
+            result.push('I love cheese, especially parmesan brie blue castello pepper jack fromage stinking bishop fromage frais dolcelatte smelly cheese. Cheese on toast squirty cheese, cheese and wine cheesy feet mascarpone danish fontina feta.');
         }else{
             result.push('https://i.imgur.com/DNyKZNC.png');
-            result.push('Best');
+            result.push('I love cheese, especially parmesan brie blue castello pepper jack fromage stinking bishop fromage frais dolcelatte smelly cheese. Cheese on toast squirty cheese, cheese and wine cheesy feet mascarpone danish fontina feta.');
         }
       return result;
     }
