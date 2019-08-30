@@ -5,9 +5,8 @@
       <br />
     </h4>
     <hr class="my-4" />
-    <b-list-group>
-      <b-list-group-item class="answer">{{result}}</b-list-group-item>
-    </b-list-group>
+    <b-img :src="result[0]" fluid alt="Responsive image"></b-img>
+      <p class="answer">{{result[1]}}</p>
     <b-button pill class="btn-success" @click="reloadPage">Play again</b-button>
   </b-jumbotron>
 </template>
@@ -25,15 +24,19 @@ export default {
   },
   computed: {
     result: function() {
-        let result = '';
+        let result = [];
         if(this.numCorrect < 5){
-            result = 'You need to learn more';
+            result.push('https://i.imgur.com/kLrG9IM.png');
+            result.push('Bad');
         }else if(this.numCorrect <7){
-            result = 'It is a good result';
+            result.push('https://i.imgur.com/l8wAI21.png'); 
+            result.push('Good');
         }else if(this.numCorrect <=9){
-            result = 'Woah';
+            result.push('https://i.imgur.com/Qumjxfk.png');
+            result.push('Better');
         }else{
-            result = 'You are nerd';
+            result.push('https://i.imgur.com/DNyKZNC.png');
+            result.push('Best');
         }
       return result;
     }
@@ -63,7 +66,7 @@ export default {
 .card {
   display: inline-block;
   position: relative;
-  width: 100%;
+  width: 80%;
   margin-bottom: 30px;
   border-radius: 15px;
   color: rgba(0, 0, 0, 0.87);

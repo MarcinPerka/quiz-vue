@@ -12,13 +12,15 @@
         v-html="answer"
       ></b-list-group-item>
     </b-list-group>
+        <b-button-group>
     <b-button
       pill
-      class="btn-success"
+      class="btn-success btn-md button-width"
       @click="submitAnswer"
       :disabled="selectedIndex === null || answered"
     >Submit</b-button>
-    <b-button pill class="btn-info" @click="next" :disabled="answered === false">Next</b-button>
+    <b-button pill class="btn-info btn-md button-width" @click="next" :disabled="answered === false">Next</b-button>
+          </b-button-group>
   </b-jumbotron>
 </template>
 
@@ -153,4 +155,9 @@ export default {
   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.60), 0 3px 1px -2px rgba(0, 0, 0, 0.60),
     0 1px 5px 0 rgba(0, 0, 0, 0.60);
 }
+
+.button-width{
+  width: 78px !important;
+}
+
 </style>

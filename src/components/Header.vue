@@ -1,17 +1,15 @@
 <template>
-  <div> 
-    <b-nav>  
-      <b-nav-item disabled><b>Quiz App</b></b-nav-item>
-      <b-nav-item disabled>Counter : {{ numCorrect }} / {{ numTotal }}</b-nav-item>
-    </b-nav>
+  <div>
+    <b-navbar variant="faded" type="dark">
+      <b-navbar-brand tag="h3" class="mb-0">Quiz App</b-navbar-brand>
+      <b-navbar-item>Counter : {{ numCorrect }} / {{ numTotal }}</b-navbar-item>
+    </b-navbar>
   </div>
 </template>
 
 <script>
 export default {
-    props:[
-        'numCorrect',
-        'numTotal'
-    ]
-}
+  props: ["numCorrect", "numTotal"]
+};
 </script>
+

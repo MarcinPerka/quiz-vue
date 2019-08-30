@@ -8,7 +8,7 @@
       <b-row>
         <b-col >
           <QuestionBox 
-          v-if="index < 10"
+          v-if="index < 2"
           :currentQuestion="questions[index]" 
           :next="next"
           :increment="increment"
