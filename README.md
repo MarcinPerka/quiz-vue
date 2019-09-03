@@ -2,9 +2,9 @@
 A simple Vue application deployed on Netlify. The application uses the opentdb API to get questions and quiz answers.
 
 ## Screenshots
-<img src="https://user-images.githubusercontent.com/44239776/64036142-c8e94b80-cb52-11e9-8bf3-c1782edf756e.png">
-<img src="https://user-images.githubusercontent.com/44239776/64036146-cb4ba580-cb52-11e9-9b71-d2f993e1f4c6.png">
-<img src="https://user-images.githubusercontent.com/44239776/64036156-d0105980-cb52-11e9-9802-9fa9ba095e4d.png">
+<img src="https://user-images.githubusercontent.com/44239776/64195542-08c96f00-ce82-11e9-9753-dc83eca0409c.png">
+<img src="https://user-images.githubusercontent.com/44239776/64195549-0bc45f80-ce82-11e9-9d7b-4aacf1e1f565.png">
+<img src="https://user-images.githubusercontent.com/44239776/64195553-0ebf5000-ce82-11e9-9419-8ef528cd2ec9.png">
 
 ## Project setup
 ```
@@ -12,7 +12,7 @@ npm install
 ```
 
 ### Compiles and hot-reloads for development
-```
+
 npm run serve
 ```
 
