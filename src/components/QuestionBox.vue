@@ -12,7 +12,7 @@
         v-html="answer"
       ></b-list-group-item>
     </b-list-group>
-        <b-button-group>
+        <b-button-group class="mt-2"> 
     <b-button
       pill
       class="btn-success btn-md button-width"
@@ -103,9 +103,7 @@ export default {
 </script>
 
 <style scoped>
-.list-group {
-  margin-bottom: 15px;
-}
+
 .list-group-item:hover {
   background: #eee;
   cursor: pointer;
@@ -113,19 +111,7 @@ export default {
 .btn {
   margin: 0 5px;
 }
-.question{
-    color: #30507A;
-    font-weight: 700;
-    font-family: "Roboto Slab", "Times New Roman", serif;
-    font: 18.2px;
-}
-.answer{
-    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-    font-weight: 300;
-    line-height: 1.5em;
-    color: #243853;
-    font: 14px;
-}
+
 .selected {
   background-color: #949ba2;
 }
@@ -143,17 +129,6 @@ export default {
 }
 .incorrect:hover{
   background-color: #f44336;
-}
-
-.card {
-  display: inline-block;
-  position: relative;
-  margin-bottom: 30px;
-  border-radius: 15px;
-  color: rgba(0,0,0, 0.87);
-  background: #fff;
-  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.60), 0 3px 1px -2px rgba(0, 0, 0, 0.60),
-    0 1px 5px 0 rgba(0, 0, 0, 0.60);
 }
 
 .button-width{

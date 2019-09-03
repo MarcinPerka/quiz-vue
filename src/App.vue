@@ -4,9 +4,8 @@
       :numCorrect="numCorrect"
       :numTotal="numTotal"
     />
-    <b-container class="container">
-      <b-row>
-        <b-col >
+    <b-container >
+      <b-row class="justify-content-center"> 
           <QuestionBox 
           v-if="index < 10"
           :currentQuestion="questions[index]" 
@@ -16,7 +15,6 @@
           <Result 
           :numCorrect="numCorrect"
           v-else/>
-        </b-col>
       </b-row>
     </b-container>
   </div>
@@ -69,6 +67,8 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab&display=swap');
+
 #app {
   font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -85,4 +85,35 @@ body {
   
   width: 100%;
 }
+
+.question{
+    color: #30507A;
+    font-weight: 700;
+    font-family: "Roboto Slab", "Times New Roman", serif;
+    font: 18.2px;
+}
+.answer{
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 300;
+    line-height: 1.5em;
+    color: #243853;
+    font: 14px;
+}
+
+.card {
+  display: inline-block;
+  position: relative;
+  width: 80%;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  color: rgba(0, 0, 0, 0.87);
+  background: #fff;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.6),
+    0 3px 1px -2px rgba(0, 0, 0, 0.6), 0 1px 5px 0 rgba(0, 0, 0, 0.6);
+}
+
+.list-group {
+  margin-bottom: 15px;
+}
+
 </style>
