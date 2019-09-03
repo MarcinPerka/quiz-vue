@@ -132,7 +132,7 @@ export default {
 }
 
 .button-width{
-  width: 78px !important;
+  width: 100px !important;
 }
 
 </style>
