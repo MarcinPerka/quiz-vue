@@ -1,5 +1,8 @@
 # quiz-vue
-A simple Vue application deployed on Netlify. The application uses the opentdb API to get questions and quiz answers.
+Quiz game created with uses Vue and OpentDB API. Deployed on netlify.
+
+## Live
+<a href="https://quiz-vue.netlify.com/">Quiz App</a>
 
 ## Screenshots
 <img src="https://user-images.githubusercontent.com/44239776/64195542-08c96f00-ce82-11e9-9753-dc83eca0409c.png">
