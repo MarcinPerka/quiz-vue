@@ -1,20 +1,15 @@
 <template>
   <div id="app">
-    <Header 
-      :numCorrect="numCorrect"
-      :numTotal="numTotal"
-    />
-    <b-container >
-      <b-row class="justify-content-center"> 
-          <QuestionBox 
+    <Header :numCorrect="numCorrect" :numTotal="numTotal" />
+    <b-container>
+      <b-row class="justify-content-center">
+        <QuestionBox
           v-if="index < 10"
-          :currentQuestion="questions[index]" 
+          :currentQuestion="questions[index]"
           :next="next"
           :increment="increment"
-          />
-          <Result 
-          :numCorrect="numCorrect"
-          v-else/>
+        />
+        <Result :numCorrect="numCorrect" v-else />
       </b-row>
     </b-container>
   </div>
@@ -42,11 +37,11 @@ export default {
     };
   },
   methods: {
-    next(){
+    next() {
       this.index++;
     },
-    increment(isCorrect){
-      if(isCorrect){
+    increment(isCorrect) {
+      if (isCorrect) {
         this.numCorrect++;
       }
       this.numTotal++;
@@ -67,37 +62,38 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab&display=swap");
 
 #app {
   font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #FBFBFA;
-  background-color: #30507A;
-  height: 100%;
-}
-body {
-  height: 100vh;
-  margin: 0;
-  padding: 0px;
-  
-  width: 100%;
 }
 
-.question{
-    color: #30507A;
-    font-weight: 700;
-    font-family: "Roboto Slab", "Times New Roman", serif;
-    font: 18.2px;
+html,
+body,
+#app {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  color: #fbfbfa;
+  background-color: #30507a;
 }
-.answer{
-    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-    font-weight: 300;
-    line-height: 1.5em;
-    color: #243853;
-    font: 14px;
+
+.question {
+  color: #30507a;
+  font-weight: 700;
+  font-family: "Roboto Slab", "Times New Roman", serif;
+  font: 18.2px;
+}
+.answer {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  line-height: 1.5em;
+  color: #243853;
+  font: 14px;
 }
 
 .card {
@@ -115,5 +111,4 @@ body {
 .list-group {
   margin-bottom: 15px;
 }
-
 </style>
