@@ -70,7 +70,13 @@ export default {
       }
       this.answered = true;
       this.increment(isCorrect);
-      setTimeout(() => this.next(), 5000);
+
+// Check if we are still on the same question (already answered) - if yes ten go to next.
+      let answeredQuestion = this.currentQuestion
+      setTimeout(() => {
+        if(answeredQuestion === this.currentQuestion)
+          this.next()
+        }, 5000);
     },
     shuffleAnswers() {
       let answers = [
