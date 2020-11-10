@@ -5,7 +5,7 @@
     <hr class="my-4" />
     <b-list-group class="answer">
        <b-list-group-item
-        v-for="(answer, index) in answers"
+        v-for="(answer, index) in shuffledAnswers"
         :key="index"
         @click.prevent="selectAnswer(index)"
         :class="answerClass(index)"
