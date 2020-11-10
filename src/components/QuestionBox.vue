@@ -70,6 +70,7 @@ export default {
       }
       this.answered = true;
       this.increment(isCorrect);
+      setTimeout(() => this.next(), 5000);
     },
     shuffleAnswers() {
       let answers = [
